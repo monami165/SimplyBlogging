@@ -47,6 +47,11 @@ function createAlbum() {
     var description = document.getElementById("description").value
     var text = document.createTextNode(description)
 
+    if (description == "") {
+        alert("Description cannot be empty!")
+        return
+    }
+
     var newAlbum = document.createElement('div')
     newAlbum.setAttribute("class","col-md-4")
 
@@ -75,5 +80,5 @@ function createAlbum() {
     document.getElementById("albums").appendChild(newAlbum)
     document.getElementById("description").value = ''
 
-    return true;
+    console.log("method reached");
 }
